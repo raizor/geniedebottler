@@ -1,4 +1,8 @@
-﻿using System;
+﻿using GenieCore;
+using GenieCore.Models;
+using GenieCore.Parsers;
+using System;
+using System.IO;
 
 namespace GenieConverter
 {
@@ -8,7 +12,12 @@ namespace GenieConverter
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Importing: %1", fpath);
+            snp_fetch_data result = SnpGrabber.GetSnp();
+
+            Console.WriteLine("Importing: "+ fpath);
+            TwentyThreeAndMe t3 = new TwentyThreeAndMe();
+            string[] lines = File.ReadAllLines(fpath);
+            genotypes data = t3.Parse(lines);
         }
     }
 }

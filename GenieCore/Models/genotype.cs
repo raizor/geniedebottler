@@ -4,37 +4,48 @@ using System.Text;
 
 namespace GenieCore.Models
 {
-    public enum genotype
+    public class genotypes : List<snp_match>
     {
-        U = 0,
-        A = 1,
-        C = 2,
-        G = 3,
-        T = 4
+        public DateTime data_export_date;
     }
 
-    public class chromosone
+    public class genotypes_human : genotypes
     {
+        public genotypes_human()
+        {
+
+        }
+    }
+
+    public class snp_property
+    {
+        public string genotypes = String.Empty;
+        public float magnitude = 0.0f;
+        public string summary = String.Empty;
+
 
     }
 
-    public class chromosone_human : chromosone
+    public class snp
     {
-
+        public int position = -1;
+        public string rsid = string.Empty;
+        public string prev_rsid = string.Empty;
+        public string description = string.Empty;
+        public string gene = string.Empty;
+        public List<snp_property> properties = new List<snp_property>();
+        public string chromosone = string.Empty;
+        public bool plusOrientation = false;
+        public bool plusStabilized = false;
+        public string reference = string.Empty;
+        public float max_magnitude = 0.0f;
+        public float gmaf = 0.0f;
+        public string notes_html = string.Empty;
     }
 
-    class snp
+    public class snp_match
     {
-        string rsid;
-        List<genotype> genotypes = new List<genotype>();
-    }
-
-    class snp_match : snp
-    {        
-        int position;        
-    }
-
-    class genome : List<snp_match>
-    {
+        public snp info;
+        public string genotypes = String.Empty;
     }
 }

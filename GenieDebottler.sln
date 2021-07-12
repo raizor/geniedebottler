@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenieCore", "GenieCore\GenieCore.csproj", "{339B1F8A-D975-4E6B-879E-8DC7E65FA3D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenieConverter", "GenieConverter\GenieConverter.csproj", "{FDDB4FD9-5DB3-46B4-BFF0-558CDAAE4190}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenieConverter", "GenieConverter\GenieConverter.csproj", "{FDDB4FD9-5DB3-46B4-BFF0-558CDAAE4190}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{68A86405-8393-46D7-A374-CDE5581A3768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenieTests", "GenieTests\GenieTests.csproj", "{2DDF79B4-70A4-4B4C-93FC-1EB8B7872D2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{FDDB4FD9-5DB3-46B4-BFF0-558CDAAE4190}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDDB4FD9-5DB3-46B4-BFF0-558CDAAE4190}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDDB4FD9-5DB3-46B4-BFF0-558CDAAE4190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDF79B4-70A4-4B4C-93FC-1EB8B7872D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDF79B4-70A4-4B4C-93FC-1EB8B7872D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDF79B4-70A4-4B4C-93FC-1EB8B7872D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDF79B4-70A4-4B4C-93FC-1EB8B7872D2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FDDB4FD9-5DB3-46B4-BFF0-558CDAAE4190} = {68A86405-8393-46D7-A374-CDE5581A3768}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA90B0AA-1A38-4CD9-B115-E4A30700E884}
